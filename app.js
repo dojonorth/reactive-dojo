@@ -6,9 +6,15 @@ nunjucks.configure('views', {
     autoescape: true,
     express: app
 });
+app.use('/npm', express.static('node_modules'));
+app.use('/test', express.static('test'));
 
 app.get('/', function (req, res) {
   res.render('index.html');
+});
+
+app.get('/fundamentals', function (req, res) {
+  res.render('testrunner.html');
 });
 
 if (!require("piping")()) { return; }
