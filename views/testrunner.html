@@ -1,23 +1,46 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Mocha Tests</title>
-    <link rel="stylesheet" href="npm/mocha/mocha.css">
-  </head>
-  <body>
-    <div id="mocha"></div>
-    <script src="npm/mocha/mocha.js"></script>
-    <script src="npm/chai/chai.js"></script>
-    <script>mocha.setup('bdd')</script>
+{% extends "base.html" %}
 
-    <!-- load code you want to test here -->
-    <script src="lib/array.js"></script>
+{% block title %}{% endblock %}
 
-    <!-- load your test files here -->
-    <script src="test/arrayTest.js"></script>
+{% block basestyle %}
+{{ super() }}
+<link rel="stylesheet" href="npm/mocha/mocha.css">
+<style>
+    #mocha h2 {
+        font-size: 14px;
+    }
 
-    <script>
-      mocha.run();
-    </script>
-  </body>
-</html>
+    #mocha {
+        margin-top: 0;
+    }
+
+    #mocha-stats {
+        position: absolute;
+    }
+
+    #container {
+        position: relative;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>Fundamentals</h1>
+<p>These tests are defined in /test, with the code to be wrote in /lib. They are there to get you
+    used to using some functional constructs. Some (map, reduce, filter) you may have come across
+    before, however, a few could be new to you.</p>
+<div id="mocha"></div>
+<script src="npm/mocha/mocha.js"></script>
+<script src="npm/chai/chai.js"></script>
+<script>mocha.setup('bdd')</script>
+
+<!-- load code you want to test here -->
+<script src="lib/fundamentals.js"></script>
+
+<!-- load your test files here -->
+<script src="test/fundamentalsTest.js"></script>
+
+<script>
+    mocha.run();
+</script>
+{% endblock %}
