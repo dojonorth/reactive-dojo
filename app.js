@@ -6,8 +6,11 @@ nunjucks.configure('views', {
     autoescape: true,
     express: app
 });
+
+/* Yeah, if you're ever writing real life node, don't do this. I'm lazy: */
 app.use('/npm', express.static('node_modules'));
 app.use('/test', express.static('test'));
+app.use('/lib', express.static('lib'));
 
 app.get('/', function (req, res) {
   res.render('index.html');
