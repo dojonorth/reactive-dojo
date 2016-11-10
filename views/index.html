@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
+{% set activeItem = "home" %}
+
 {% block content %}
 <h1>Reactive Programming Dojo</h1>
 <p>Today we're going to be doing a bit of coding in the realm of functional reactive
-    programming. You already seem to have the node application up and running, which is
+    programming. You already have the node application up and running, which is
     encouraging.</p>
 <p>This is a bit of a 'full-stack' dojo in that we shall be messing about on both the front
     end and the back end, however, we shall try to keep everything as technology neutral as
@@ -13,6 +15,7 @@
 <p>If you are curious, the library we're using to create and manipulate event streams is
     <code>batman.js</code>. Feel free to check out the
     <a href="https://baconjs.github.io/">project page</a> if you want to see how and why
-    everything plugs together.
+    everything plugs together, as well as some "proper" docs.
 </p>
+<p>In the meantime, you should be able to ease into Functional Reactive Programming with some simple, test driven teaching by checking out <a href="/fundamentals">Fundamentals</a>.</p>
 {% endblock %}

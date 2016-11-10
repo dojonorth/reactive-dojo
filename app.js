@@ -20,6 +20,8 @@ app.get('/fundamentals', function (req, res) {
   res.render('testrunner.html');
 });
 
+app.use('/static', express.static('static'));
+
 if (!require("piping")()) { return; }
 
 app.listen(3000, function () {

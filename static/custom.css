@@ -1,0 +1,26 @@
+.nav {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.nav__link {
+    text-decoration: none;
+}
+
+.nav__link--active::before {
+    content: '> ';
+    left: -1.5rem;
+    position: absolute;
+    top: 0.8rem;
+}
+
+.nav__link--active {
+    position: relative;
+}
+
+.nav__link--active::before {
+    content: '> ';
+    left: -1.5rem;
+    position: absolute;
+    top: -0.4rem;
+}

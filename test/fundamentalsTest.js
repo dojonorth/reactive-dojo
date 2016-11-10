@@ -1,7 +1,7 @@
 var assert = chai.assert;
 
-describe('Fundamentals / native', function() {
-  describe('The bare minimum', function() {
+describe('Fundamentals / native', () => {
+  describe('The bare minimum', () => {
     it('map'); // square
     it('filter'); // odds
     it('reduce'); // sum
@@ -9,7 +9,7 @@ describe('Fundamentals / native', function() {
     it('foreach'); // side effects / update value?
   });
 
-  describe('Observables and further concepts', function() {
+  describe('Observables and further concepts', () => {
     it('observables feature all of the above')
     it('subscribe is an alias for foreach');
     it('more methods - zip, concatAll etc');
