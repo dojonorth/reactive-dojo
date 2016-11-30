@@ -6,7 +6,9 @@
     {% block basestyle %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
     <link rel="stylesheet" href="/static/custom.css">
-    <!--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
+    {% endblock %}
+    {% block scripts %}
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="/npm/baconjs/dist/Bacon.js"></script>
     {% endblock %}
 
@@ -19,7 +21,7 @@
                 {% set navigation = [
                     {route: '/', name: 'home', text: '0. Home'},
                     {route: '/fundamentals', name: 'fundamentals', text: '1. Fundamentals'},
-                    {route: '/frontend', name: 'frontend', text: '2. Simple Front-End'},
+                    {route: '/bacon-intro', name: 'bacon-intro', text: '2. Simple Front-End Bacon'},
                     {route: '/interacting', name: 'frontend', text: '3. Interacting With Data'}
                 ] %}
                 <nav>

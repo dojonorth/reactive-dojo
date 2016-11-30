@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+{{ super() }}
+<script src="lib/baconIntro.js"></script>
+{% endblock %}
+
+{% set activeItem = "bacon-intro" %}
+
+{% block content %}
+<h1>Bacon.js on the Frontend</h1>
+
+<p>So here, we shall be looking at using Bacon in the browser, all of the 
+    javascript you need to edit can be found in `lib/baconIntro.js`.</p>
+{% endblock %}

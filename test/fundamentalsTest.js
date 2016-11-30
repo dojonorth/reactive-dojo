@@ -40,12 +40,12 @@ describe('Fundamentals', () => {
       let stream = Bacon.fromArray(inputArray);
       let result = []
 
-      stream.onValue(x => result.push(x));
+      stream.onValue(___);
 
       assert.deepEqual(result, inputArray);
     });
 
-    it('you can process streams in the same way as arrays', () => {
+    it('you can process streams in the same way as arrays', (done) => {
       let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
 
       // In this ridiculously convoluted example, you should use .map, .filter, and .reduce to
@@ -54,9 +54,10 @@ describe('Fundamentals', () => {
       let stream = Bacon.fromArray(planets)//.map....filter...reduce...
 
       let result = '';
-      stream.onValue(val => result = val);
-
-      assert.equal(result, 'venus>earth>saturn>uranus>');
+      stream.onValue(result => {
+        assert.equal(result, 'venus>earth>saturn>uranus>');
+        done();
+      });
     });
 
     it('Properties / front-end events', () => {

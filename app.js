@@ -20,6 +20,10 @@ app.get('/fundamentals', function (req, res) {
   res.render('testrunner.html');
 });
 
+app.get('/bacon-intro', function (req, res) {
+  res.render('bacon-intro.html');
+});
+
 app.use('/static', express.static('static'));
 
 if (!require("piping")()) { return; }
