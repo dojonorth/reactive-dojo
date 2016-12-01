@@ -66,12 +66,6 @@ describe('Fundamentals', () => {
       // reduce (or 'scan' in bacon parlance) produces a property
       // bacon methods can work on both streams and properties
 
-      // so here we want to start off dead simple - a single event stream, maybe make it console.log
-      // just enough to link bacon to things that happen.
-
-      // probably good to introduce properties as soon as possible.
-      // Map a button click to increment a number. Set up element in page to watch sum of that number.
-
       // then show we can merge streams. Introduce decrementer. Merge With incrementer.
 
     });
