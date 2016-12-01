@@ -10,22 +10,22 @@ describe('Fundamentals', () => {
 
     it('uses the native map function to square an array of numbers', () => {
       let squared = input.map(___);
-      assert.deepEqual([1, 4, 9, 16, 25], squared);
+      assert.deepEqual(squared, [1, 4, 9, 16, 25]);
     });
 
     it('uses the native map function to filter an array of numbers', () => {
       let odds = input.filter(___);
-      assert.deepEqual([1, 3, 5], odds);
+      assert.deepEqual(odds, [1, 3, 5]);
     });
 
     it('finds the total of an array of numbers', () => {
       let sum = input.reduce(___);
-      assert.equal(15, sum);
+      assert.equal(sum, 15);
     });
 
     it('successfully chains map filter & reduce', () => {
       let sum = input.map(___).filter(___).reduce(___);
-      assert.equal(35, sum);
+      assert.equal(sum, 35);
     });
   });
 
@@ -42,7 +42,7 @@ describe('Fundamentals', () => {
 
       stream.onValue(___);
 
-      assert.deepEqual(result, inputArray);
+      assert.deepEqual(inputArray, result);
     });
 
     it('you can process streams in the same way as arrays', (done) => {
@@ -55,10 +55,10 @@ describe('Fundamentals', () => {
 
       let result = '';
       stream.onValue(result => {
-        assert.equal(result, 'venus>earth>saturn>uranus>');
+        assert.equal('venus>earth>saturn>uranus>', result);
         done();
       });
-    });
+});
 
     it('REMAINING TODO', () => {
       // Forms seem like a good test-bed for streams and properties
