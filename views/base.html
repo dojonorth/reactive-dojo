@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
     <link rel="stylesheet" href="/static/custom.css">
     {% endblock %}
+    {% block scripts %}
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="/npm/baconjs/dist/Bacon.js"></script>
+    {% endblock %}
 
     <title>{% block title %}{% endblock %}Reactive Programming Dojo</title>
 </head>
@@ -17,13 +21,15 @@
                 {% set navigation = [
                     {route: '/', name: 'home', text: '0. Home'},
                     {route: '/fundamentals', name: 'fundamentals', text: '1. Fundamentals'},
-                    {route: '/frontend', name: 'frontend', text: '2. Simple Front-End'},
-                    {route: '/interacting', name: 'frontend', text: '3. Interacting With Data'}
+                    {route: '/bacon-intro', name: 'bacon-intro', text: '2. Simple Front-End Bacon'},
+                    {route: '/form-workshop', name: 'form-workshop', text: '3. Form Logic Workshop'}
                 ] %}
                 <nav>
                     <ul class="nav">
                     {% for item in navigation %}
-                        <li class="nav__menu-item"><a class="nav__link{% if activeItem === item.name %} nav__link--active{% endif %}" href="{{ item.route }}">{{ item.text }}</a></li>
+                        <li class="nav__menu-item">
+                            <a class="nav__link{% if activeItem === item.name %} nav__link--active{% endif %}" href="{{ item.route }}">{{ item.text }}</a>
+                        </li>
                     {% endfor %}
                     </ul>
                 </nav>
