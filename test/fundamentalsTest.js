@@ -1,4 +1,4 @@
-var assert = chai.assert;
+let assert = chai.assert;
 
 describe('Fundamentals', () => {
   describe('Native JS functional methods', () => {
