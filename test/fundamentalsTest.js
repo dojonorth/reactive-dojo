@@ -60,17 +60,7 @@ describe('Fundamentals', () => {
       });
     });
 
-    it('Properties / front-end events', () => {
-      // stream === an array of events
-      // property === a value representing the output of some events
-      // reduce (or 'scan' in bacon parlance) produces a property
-      // bacon methods can work on both streams and properties
-
-      // then show we can merge streams. Introduce decrementer. Merge With incrementer.
-
-    });
-
-    it('putting it all together', () => {
+    it('REMAINING TODO', () => {
       // Forms seem like a good test-bed for streams and properties
 
       // 1. Simple property validation: disable button when no content in text field
