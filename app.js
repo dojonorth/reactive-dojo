@@ -24,6 +24,10 @@ app.get('/bacon-intro', function (req, res) {
   res.render('bacon-intro.html');
 });
 
+app.get('/form-workshop', function (req, res) {
+  res.render('form-workshop.html');
+});
+
 app.use('/static', express.static('static'));
 
 if (!require("piping")()) { return; }
