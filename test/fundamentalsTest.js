@@ -58,15 +58,6 @@ describe('Fundamentals', () => {
         assert.equal('venus>earth>saturn>uranus>', result);
         done();
       });
-});
-
-    it('REMAINING TODO', () => {
-      // Forms seem like a good test-bed for streams and properties
-
-      // 1. Simple property validation: disable button when no content in text field
-      // 2. use .and to validate two text fields
-      // 3. use .not() with submitted to only allow one submission
-
-    })
+    });
   });
 });
