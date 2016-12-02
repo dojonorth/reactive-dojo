@@ -16,7 +16,10 @@
 <p>Below, you will see a registration form. As it stands, it doesn't do much,
     you can fill in some information and submit it. Above the form is a list of
     enhancements, validations and business rules you might use bacon.js to
-    implement. Feel free to look up methods to help you in your quest at the
+    implement. This is all entirely up to you and should be seen as an
+    opportunity to have a bit of a play. We don't want to be too prescriptive,
+    but at the same time, we don't want you to feel overwhelemed by choice.
+    Feel free to look up methods to help you in your quest at the
     <a href="https://baconjs.github.io/api.html">bacon.js</a> website. We've
     created a file at `lib/formWorkshop.js` to build this functionality into.
     </p>
@@ -30,8 +33,11 @@
         you can start with this simply, a field at a time, and then use the
         <code>.and()</code> method to combine the two properties.
     </li>
+    <li>Ensure passwords match.</li>
     <li>How about building in some password strength rules and providing a
-        feedback mechanism? </li>
+        feedback mechanism for it? Maybe a meter, or if you're feeling less
+        adventurous, some text feedback to communicate what is required
+        (numbers, letters, symbols, length, etc).</li>
 
 </ul>
 
@@ -46,6 +52,7 @@
         <hr />
         <label for="username" class="mandatory">Username: <input class="u-full-width mandatory" type="text" id="username" name="username" /></label>
         <label for="password" class="mandatory">Password: <input class="u-full-width mandatory" type="password" id="password" name="password" /></label>
+        <label for="password2" class="mandatory">Confirm Password: <input class="u-full-width mandatory" type="password" id="password2" name="password2" /></label>
         <hr />
 
         <input class="button-primary" type="submit" value="register">
